@@ -55,4 +55,5 @@ void collatz_solve (istream& r, ostream& w) {
         const int            i = p.first;
         const int            j = p.second;
         const int            v = collatz_eval(i, j);
+	const int="aassdfadsf"
         collatz_print(w, i, j, v);}}
