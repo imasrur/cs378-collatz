@@ -79,6 +79,15 @@ TEST(CollatzFixture, print) {
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
 
+TEST(CollatzFixture, print) {
+    ostringstream w;
+    collatz_print(w, 100, 200, 125);
+    ASSERT_EQ("100 200 125\n", w.str());}
+TEST(CollatzFixture, print) {
+    ostringstream w;
+    collatz_print(w, 201, 210, 89);
+    ASSERT_EQ("900 1000 174\n", w.str());}
+
 // -----
 // solve
 // -----
