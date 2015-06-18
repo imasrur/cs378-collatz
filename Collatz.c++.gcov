@@ -53,9 +53,9 @@ call    2 never executed
         -:   35:// collatz_eval
         -:   36:// ------------
         -:   37:
-function _Z12collatz_evalii called 13 returned 100% blocks executed 84%
+function _Z12collatz_evalii called 13 returned 100% blocks executed 81%
        13:   38:int collatz_eval (int i, int j) {
-        -:   39:    int temp;
+        -:   39:	int temp;
        13:   40:    int m=0;
         -:   41:
         -:   42:   
@@ -74,43 +74,46 @@ call    2 never executed
 branch  0 taken 0% (fallthrough)
 branch  1 taken 100%
 call    2 never executed
-        -:   50:    //int s=1;
+        -:   50:   // int s=1;
         -:   51:
       517:   52:    for(int a=i; a<=j; a++){
 branch  0 taken 97%
 branch  1 taken 3% (fallthrough)
         -:   53:
       504:   54:        int c = 1;
-        -:   55:	// s=1;
+        -:   55:        // s=1;
       504:   56:        int n = a;
     27352:   57:        while (n> 1) {
 branch  0 taken 98%
 branch  1 taken 2% (fallthrough)
         -:   58:	      // if((c<10000)&&(lazycache[(unsigned)c]!=0)){
         -:   59:	         //  s=s+lazycache[(unsigned)c];
-        -:   60:	         //  c=1;
+        -:   60:	        //   c=1;
         -:   61:        	//}
     26344:   62:            if ((n % 2) == 0){
 branch  0 taken 67% (fallthrough)
 branch  1 taken 33%
     17708:   63:                n = (n / 2);
-        -:   64:		 //         s++;
+        -:   64:		//          s++;
         -:   65:            }
         -:   66:            else{
      8636:   67:                n = (3 * n) + 1;
-        -:   68:		      //  s=s+2;
+        -:   68:		//        s=s+2;
         -:   69:	        }
     26344:   70:            ++c;
         -:   71:	    }
-        -:   72:       // assert(c > 0);
+      504:   72:        assert(c > 0);
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+call    2 never executed
       504:   73:        if(c>m){
 branch  0 taken 11% (fallthrough)
 branch  1 taken 89%
        57:   74:            m=c;
         -:   75:        }
-        -:   76:	 //  if (s<=10000 && i<10000){
-        -:   77:	   	//lazycache[(unsigned)c]=s;
-        -:   78:	  // }
+        -:   76:	   //if (s<=10000 && i<10000){
+        -:   77:	   //	lazycache[(unsigned)c]=s;
+        -:   78:	   //}
         -:   79:    }
        13:   80:    return m;
         -:   81:}
