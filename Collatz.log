@@ -1,0 +1,59 @@
+commit fb0f17f5ce66e96570bec4ff9eb969acb084163d
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 19:54:00 2015 -0500
+
+    time problem
+
+commit 974bf7141e12323b99f4afcc4e7a3e845440e9a2
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 19:45:41 2015 -0500
+
+    finally working
+
+commit 28f08988ae379579b59b7ee101300c02d664d65f
+Author: imasrur <imasrur@users.noreply.github.com>
+Date:   Wed Jun 17 13:15:49 2015 -0500
+
+    Create SphereCollatz.c++
+
+commit 5010106f422a3502c7e80bfb2425945b951f0f75
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 12:50:01 2015 -0500
+
+    added few test cases to print in TestCollatz.c++
+
+commit 64eaaf3d045d5cf2d4d5c3a0cdf2816beabb95a2
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 12:49:37 2015 -0500
+
+    added few test cases to print in TestCollatz.c++
+
+commit 0efae8adee9daffdb802a694a30d722251282120
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 12:36:20 2015 -0500
+
+    implemented few test cases hope they are correct
+
+commit 0662e53f93968631a819db54e2beb3c7ba0dec17
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 11 18:50:36 2015 -0500
+
+    testing for CI again
+
+commit 68d1fa44e335dc4dcd5c87b19bc6adf8201b1e0c
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 11 18:33:14 2015 -0500
+
+    testing travis ci
+
+commit f07a40d0f59060e944e949948a6735114f494006
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 11 18:25:37 2015 -0500
+
+    copy the  code from repo close #3
+
+commit c604bef84d225ef7a7d7a5457164fc796ee2b92f
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 11 18:21:43 2015 -0500
+
+    initial commit
