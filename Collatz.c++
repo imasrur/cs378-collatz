@@ -16,7 +16,7 @@
 
 #include "Collatz.h"
 #include <cassert> 
-//int lazycache[10000]={0};
+int lazycache[10000]={0};
 
 using namespace std;
 
@@ -36,7 +36,7 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-    int temp;
+	int temp;
     int m=0;
 
    
@@ -47,35 +47,35 @@ int collatz_eval (int i, int j) {
     }
     assert(i>0);
     assert(j>0);
-    //int s=1;
+    int s=1;
 
     for(int a=i; a<=j; a++){
 
         int c = 1;
-	// s=1;
+         s=1;
         int n = a;
         while (n> 1) {
-	      // if((c<10000)&&(lazycache[(unsigned)c]!=0)){
-	         //  s=s+lazycache[(unsigned)c];
-	         //  c=1;
-        	//}
+	       if((count<10000)&&(lazycache[(unsigned)c]!=0)){
+	           s=s+lazycache[(unsigned)c];
+	           c=1;
+        	}
             if ((n % 2) == 0){
                 n = (n / 2);
-		 //         s++;
+		          s++;
             }
             else{
                 n = (3 * n) + 1;
-		      //  s=s+2;
+		        s=s+2;
 	        }
             ++c;
 	    }
-       // assert(c > 0);
+        assert(c > 0);
         if(c>m){
             m=c;
         }
-	 //  if (s<=10000 && i<10000){
-	   	//lazycache[(unsigned)c]=s;
-	  // }
+	   if (s<=10000 && i<10000){
+	   	lazycache[(unsigned)c]=s;
+	   }
     }
     return m;
 }
