@@ -14,7 +14,7 @@
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
 
-#include "Collatz.h"
+
 #include <cassert> 
 
 using namespace std;
@@ -22,6 +22,9 @@ using namespace std;
 // ------------
 // collatz_read
 // ------------
+#ifdef ONLINE_JUDGE
+    #define NDEBUG
+#endif
 
 pair<int, int> collatz_read (const string& s) {
     istringstream sin(s);
@@ -96,9 +99,7 @@ void collatz_solve (istream& r, ostream& w) {
 // defines
 // -------
 
-#ifdef ONLINE_JUDGE
-    #define NDEBUG
-#endif
+
 
 // --------
 // includes
@@ -111,7 +112,7 @@ void collatz_solve (istream& r, ostream& w) {
 // ----
 
 int main () {
-    using namespace std;
+
     collatz_solve(cin, cout);
     
     return 0;}
