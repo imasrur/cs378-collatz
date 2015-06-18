@@ -34,21 +34,21 @@ TEST(CollatzFixture, read) {
     const pair<int, int> p = collatz_read(s);
     ASSERT_EQ( 1, p.first);
     ASSERT_EQ(10, p.second);}
-TEST(CollatzFixture, read) {
-    string s("100 200\n");
+TEST(CollatzFixture, read1) {
+    string s("1 1\n");
     const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ( 100, p.first);
-    ASSERT_EQ(200, p.second);}
-TEST(CollatzFixture, read) {
-    string s("201 210\n");
+    ASSERT_EQ(1, p.first);
+    ASSERT_EQ(1, p.second);}
+TEST(CollatzFixture, read2) {
+    string s("20 30\n");
     const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ( 201, p.first);
-    ASSERT_EQ(210, p.second);}
-TEST(CollatzFixture, read) {
-    string s("900 1000\n");
+    ASSERT_EQ(20, p.first);
+    ASSERT_EQ(30, p.second);}
+TEST(CollatzFixture, read3) {
+    string s("30 40\n");
     const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ( 900, p.first);
-    ASSERT_EQ(1000, p.second);}
+    ASSERT_EQ(30, p.first);
+    ASSERT_EQ(40, p.second);}
 
 // ----
 // eval
@@ -56,19 +56,34 @@ TEST(CollatzFixture, read) {
 
 TEST(CollatzFixture, eval_1) {
     const int v = collatz_eval(1, 10);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(20, v);}
 
 TEST(CollatzFixture, eval_2) {
     const int v = collatz_eval(100, 200);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(125, v);}
 
 TEST(CollatzFixture, eval_3) {
     const int v = collatz_eval(201, 210);
-    ASSERT_EQ(1, v);}
+    ASSERT_EQ(89, v);}
 
 TEST(CollatzFixture, eval_4) {
     const int v = collatz_eval(900, 1000);
+    ASSERT_EQ(174, v);}
+TEST(CollatzFixture, eval_5) {
+    const int v = collatz_eval(1, 1);
     ASSERT_EQ(1, v);}
+TEST(CollatzFixture, eval_6) {
+    const int v = collatz_eval(10, 20);
+    ASSERT_EQ(21, v);}
+TEST(CollatzFixture, eval_7) {
+    const int v = collatz_eval(20, 30);
+    ASSERT_EQ(112, v);}
+TEST(CollatzFixture, eval_8) {
+    const int v = collatz_eval(30, 40);
+    ASSERT_EQ(107 v);}
+TEST(CollatzFixture, eval_9) {
+    const int v = collatz_eval(40, 50);
+    ASSERT_EQ(110, v);}
 
 // -----
 // print
@@ -79,18 +94,15 @@ TEST(CollatzFixture, print) {
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
 
-TEST(CollatzFixture, print) {
+TEST(CollatzFixture, print1) {
     ostringstream w;
-    collatz_print(w, 100, 200, 125);
-    ASSERT_EQ("100 200 125\n", w.str());}
-TEST(CollatzFixture, print) {
+    collatz_print(w, 1, 1, 1);
+    ASSERT_EQ("1 1 1\n", w.str());}
+TEST(CollatzFixture, print2) {
     ostringstream w;
-    collatz_print(w, 201, 210, 89);
-    ASSERT_EQ("201 210 89\n", w.str());}
-TEST(CollatzFixture, print) {
-    ostringstream w;
-    collatz_print(w, 900, 1000, 174);
-    ASSERT_EQ("900 1000 174\n", w.str());}
+    collatz_print(w, 10, 20, 30);
+    ASSERT_EQ("10 20 30\n", w.str());}
+
 
 // -----
 // solve
