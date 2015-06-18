@@ -55,7 +55,7 @@ int collatz_eval (int i, int j) {
          s=1;
         int n = a;
         while (n> 1) {
-	       if((count<10000)&&(lazycache[(unsigned)c]!=0)){
+	       if((c<10000)&&(lazycache[(unsigned)c]!=0)){
 	           s=s+lazycache[(unsigned)c];
 	           c=1;
         	}
