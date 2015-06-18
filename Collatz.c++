@@ -16,6 +16,7 @@
 
 #include "Collatz.h"
 #include <cassert> 
+int lazycache[100000]={0};
 
 using namespace std;
 
@@ -46,21 +47,35 @@ int collatz_eval (int i, int j) {
     }
     assert(i>0);
     assert(j>0);
+    int s=1;
 
     for(int a=i; a<=j; a++){
 
         int c = 1;
+	    int s=1;
         int n = a;
         while (n> 1) {
-            if ((n % 2) == 0)
+	       if((count<10000000)&&(lazycache[(unsigned)c]!=0)){
+	           s=s+lazycache[(unsigned)c];
+	           c=1;
+        	}
+            if ((n % 2) == 0){
                 n = (n / 2);
-            else
+		          s++;
+            }
+            else{
                 n = (3 * n) + 1;
-            ++c;}
+		        s=s+2;
+	        }
+            ++c;
+	    }
         assert(c > 0);
         if(c>m){
             m=c;
         }
+	   if (s<=100000 && i<10000){
+	   	lazycache[(unsigned)c]=v;
+	   }
     }
     return m;
 }
