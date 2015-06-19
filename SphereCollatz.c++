@@ -25,7 +25,10 @@ using namespace std;
 #ifdef ONLINE_JUDGE
     #define NDEBUG
 #endif
-int lazycache[100000]={0};
+#define CACHESIZE 1000000
+#ifdef CACHESIZE
+int lazycache[CACHESIZE]={0};
+#endif
 pair<int, int> collatz_read (const string& s) {
     istringstream sin(s);
     int i;
@@ -56,9 +59,11 @@ int collatz_eval (int i, int j) {
         int c = 1;
  
         int n = a;
+#ifdef CACHESIZE
  if((lazycache[n]!=0)){
 	n=0;
         	}
+#endif
         while (n> 1) {
 	   
             if ((n % 2) == 0){
@@ -71,6 +76,7 @@ int collatz_eval (int i, int j) {
             ++c;
 	    }
         assert(c > 0);
+#ifdef CACHESIZE
 	if(lazycache[a]==0){
 	lazycache[a]=c;
 	}
@@ -78,7 +84,13 @@ int collatz_eval (int i, int j) {
             m=lazycache[a];
 
         }
-	   
+	#endif  
+	#ifndef CACHESIZE
+        if(c>m){
+            m=c;
+
+        }
+	#endif 
     }
     return m;
 }
