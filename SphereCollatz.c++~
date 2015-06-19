@@ -25,7 +25,7 @@ using namespace std;
 #ifdef ONLINE_JUDGE
     #define NDEBUG
 #endif
-int lazycache[100000]={0};
+
 pair<int, int> collatz_read (const string& s) {
     istringstream sin(s);
     int i;
