@@ -1,3 +1,70 @@
+commit bc2d0bf5f9033075ec819468e7af2673ca96898f
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 19:38:56 2015 -0500
+
+    using endif
+
+commit 36ab753d4d8dc85538f25e1a0c7e38355725fd07
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 19:26:57 2015 -0500
+
+    updated
+
+commit 3c407f3d91f81ee49f8e17ebc4dbaa518f3458ac
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 19:17:54 2015 -0500
+
+    lazy cache worked
+
+commit fd927aa66d419f72fab83f70819e25deccb71594
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 18:42:48 2015 -0500
+
+    This should work
+
+commit 9da6c3c19db242431545a72241a60d5ccc4e2a22
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 18:33:15 2015 -0500
+
+    without cache
+
+commit 8151b06f6bddb884d230358848bf9b460f1a0cff
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 18:24:01 2015 -0500
+
+    This should fix the master
+
+commit 2d992eb9719bafb6b79870209da309917df5141c
+Merge: 1cde69d eb120bc
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 18:14:51 2015 -0500
+
+    Update dev
+
+commit eb120bc938c64dcf943f4f2627f1b1bc7bf1b4e7
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 18:11:22 2015 -0500
+
+    updated the lazy cache
+
+commit 1cde69d1bab4b15205cd04dcc324cf99550a0123
+Author: imran <imasrur92@utexas.edu>
+Date:   Thu Jun 18 18:05:29 2015 -0500
+
+     this should be final
+
+commit 5eb41d16eae30fa252b679beccbc02303aaea8df
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 20:56:04 2015 -0500
+
+    This should implement the cache only file I have changed is the collatz.c++
+
+commit ce3063868885072d1c256ac0538584a43ce94404
+Author: imran <imasrur92@utexas.edu>
+Date:   Wed Jun 17 20:23:48 2015 -0500
+
+    few more steps
+
 commit fb0f17f5ce66e96570bec4ff9eb969acb084163d
 Author: imran <imasrur92@utexas.edu>
 Date:   Wed Jun 17 19:54:00 2015 -0500
